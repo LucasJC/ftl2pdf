@@ -1,0 +1,47 @@
+html {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: green;
+}
+
+@page{
+    margin-top: 2.5cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    margin-bottom: 1.0cm;
+    size: A4 portrait;
+}
+
+div.header {
+    display: block;
+    text-align: center;
+    position: running(header);
+}
+
+img {
+	text-align: center;
+	width: 700px;
+}
+
+
+div.footer {
+    display: block;
+    text-align: center;
+    position: running(footer);
+}
+
+div.content {
+    page-break-after: always;
+}
+
+@page {
+    @top-center {
+        content: element(header)
+    }
+}
+
+@page {
+    @bottom-center {
+        content: element(footer)
+    }
+}
